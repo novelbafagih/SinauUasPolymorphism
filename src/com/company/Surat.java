@@ -3,20 +3,21 @@ package com.company;
 public class Surat {
     private PesanSurat pengirim;
     private String isiSurat;
-    private int suratId;
 
-    public Surat(PesanSurat pengirim, String isiSurat, int suratId) {
+    public Surat(PesanSurat pengirim, String isiSurat) {
         this.pengirim = pengirim;
         this.isiSurat = isiSurat;
-        this.suratId = suratId;
     }
 
     @Override
     public String toString() {
         return "Surat{" +
-                "pengirim=" + pengirim.melihatSurat(suratId) +
+                "pengirim=" + pengirim +
                 ", isiSurat='" + isiSurat + '\'' +
-                ", suratId=" + suratId +
                 '}';
+    }
+
+    public String getIsiSurat() {
+        return isiSurat;
     }
 }

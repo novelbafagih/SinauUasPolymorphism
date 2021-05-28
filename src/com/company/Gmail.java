@@ -1,18 +1,10 @@
 package com.company;
 
-public class Yahoo extends Email{
-    static int x = 3;
-    public int y = 1;
-    public Yahoo(String userName) {
+public class Gmail extends Email{
+
+    public Gmail(String userName) {
         super(userName);
         idProvider = "@yahoo.com";
-    }
-    static {
-        print();
-
-    }
-    public static void print(){
-        System.out.println();
     }
 
     public String encryption(String isiSurat){

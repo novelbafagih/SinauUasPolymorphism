@@ -13,6 +13,7 @@ public abstract class Email implements PesanSurat {
         this.userName = userName;
     }
 
+
     static {
         suratSurat = new ArrayList<Surat>();
         suratId = 1;
@@ -25,14 +26,7 @@ public abstract class Email implements PesanSurat {
         suratId++;
     }
 
-    @Override
-    public void menerimaSurat(PesanSurat pengirimProvider,
-                              String isiSurat) {
-        suratSurat.add(new Surat(pengirimProvider,isiSurat,suratId));
-    }
-
-    @Override
-    public String melihatSurat(int suratId) {
-        return Email.suratSurat.get(Email.suratId-1).toString();
+    public static int getSuratId() {
+        return suratId;
     }
 }
